@@ -1,3 +1,5 @@
+
+```mermaid
 sequenceDiagram
     participant User
     participant login_jsp as login.jsp
@@ -20,6 +22,9 @@ sequenceDiagram
     else Failure
         AccountsNav->>User: Redirect signup?showLoginBox=true + error
     end
+```
+
+```mermaid
 flowchart LR
     A[login.jsp Form] -->|POST action1=SIGNIN| B[AccountsNavigation]
     B --> C{Valid _vld?}
@@ -31,3 +36,6 @@ flowchart LR
     G -->|Yes| H[loginWithAuthentication]
     H --> I[Session + cookies]
     I --> J[Redirect home or continueURI]
+```
+
+---
